@@ -1,0 +1,28 @@
+**设置git的基础name 和 email**
+git init
+git config global user.name 'github名字'
+git config global user.email '你的邮箱'
+
+
+**git & github 同步**
+将C://用户/ASUS/.ssh/id_rsa.pub 内的内容添加到github上的sshkey上设置免密
+没有ssh密码的 ， 用命令ssh-keygen
+
+**第一次同步本地，github上没有**
+git remote add origin 仓库内的ssh地址
+**只要有同步就用这一命令**
+git push -u origin master
+
+**远程同步到本地**
+git clone github仓库内的ssh地址
+
+
+**创建新文件 & 修改文件**
+1.首先创建文件
+2.git add 文件名
+3.git commit -m '注释说明'
+4.git push origin master
+
+**删除文件**
+1.rm -rf 文件名
+2.后面步骤同上2.3.4
